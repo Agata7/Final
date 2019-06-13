@@ -1,0 +1,107 @@
+div.app {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  max-height: 20vh;
+  background-color: blue;
+  color: white;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.listProducts {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.listProducts>div {
+  background-color: white;
+  padding: 5px;
+  flex-basis: 35%;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  flex-grow: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  max-height: 10vh;
+  background-color: blue;
+}
+
+#pageNumbers {
+  display: inline-flex;
+  color: black;
+  font-size: 20px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+#pageNumbers>li {
+  margin: 5px;
+  display: block;
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  flex-basis: 5vh;
+}
+
+
+
+#pageNumbers li.active {
+  background-color: blue;
+  border: 2px solid blue;
+  color: white;
+}
+
+#pageNumbers li:hover:not(.active) {
+  border-bottom: gray solid 2px;
+}
+
+input {
+  text-align: left;
+  width: 35%;
+  height: 5vh;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/* Ewentualna ikonka, jeśli sposób wyszukiwaania byłby na kilk */
+
+/* .fas {
+  font-size: 150%;
+  line-height: 5vh;
+  width: 5%;
+  height: 5vh;
+  margin: 10px 0px 20px 0px;
+  background-color: white;
+  color: blue;
+  border-radius: 0px 20px 20px 0px;
+
+} */

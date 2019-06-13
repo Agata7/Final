@@ -1,0 +1,142 @@
+  .popUpContainer {
+      height: 75vh;
+      width: 80%;
+      box-sizing: border-box;
+      border: 2px solid grey;
+      position: relative;
+      top: 0;
+      padding: 20px;
+      background-color: #fff;
+      overflow: scroll;
+  }
+
+  .closeBtn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 20px;
+      padding: 5px;
+      display: block;
+      border: 2px solid blue;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 20px;
+      color: white;
+      font-weight: bold;
+      background-color: blue;
+
+  }
+
+  p {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      display: block;
+      max-width: 40%;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: inherit;
+  }
+
+  .titlePopUp {
+      font-family: "Open Sans", sans-serif;
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      width: 50%;
+      left: 25%;
+      font-size: 20px;
+      text-align: center;
+      margin: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+
+  .bg {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      filter: alpha(opacity=50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .idPopUp {
+      position: absolute;
+      display: inline-block;
+      width: 50%;
+      font-size: 15px;
+      line-height: 5px;
+      font-family: "Open Sans", sans-serif;
+      top: 9%;
+      left: 50%;
+  }
+
+  .picturePopUp {
+      position: absolute;
+      width: 42%;
+      top: 10%;
+      left: 0;
+      align-self: center;
+  }
+
+  .brandPopUp {
+      position: absolute;
+      right: 0;
+      top: 12%;
+      font-size: 19px;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 50%;
+  }
+
+  .counterPopUp {
+      position: absolute;
+      display: block;
+      width: 50%;
+      bottom: 0;
+      left: 0;
+
+  }
+
+  @media screen and (max-width: 900px) {
+      .idPopUp {
+          font-size: 9px;
+      }
+
+      .titlePopUp {
+          font-size: 15px;
+
+      }
+
+      .popUpContainer {
+          width: 80%;
+          top: 0%;
+      }
+  }
+
+  @media screen and (max-width: 650px) {
+      p {
+          font-size: 12px;
+          width: 45%;
+      }
+
+      #pageNumbers {
+          font-size: 15px;
+
+      }
+
+      #pageNumbers>li {
+          width: 20%;
+          padding: 3px;
+      }
+
+      .fas {
+          font-size: 100%;
+      }
+  }
