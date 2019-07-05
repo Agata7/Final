@@ -104,25 +104,9 @@
 
   }
 
-  @media screen and (max-width: 900px) {
-      .idPopUp {
-          font-size: 9px;
-      }
-
-      .titlePopUp {
-          font-size: 15px;
-
-      }
-
-      .popUpContainer {
-          width: 80%;
-          top: 0%;
-      }
-  }
-
   @media screen and (max-width: 650px) {
       p {
-          font-size: 12px;
+          font-size: 15px;
           width: 45%;
       }
 
@@ -133,10 +117,54 @@
 
       #pageNumbers>li {
           width: 20%;
-          padding: 3px;
+          padding: 2px;
+          margin: 2px;
+          flex-basis: 3vh;
       }
 
-      .fas {
-          font-size: 100%;
+      .listProducts>div {
+          flex-basis: 70%;
       }
+
+      input {
+          font-size: 15px;
+      }
+
+      .closeBtn {
+          right: 7px;
+          top: 7px;
+          font-size: 15px;
+          padding: 3.2px;
+          width: 25px;
+          height: 25px;
+          line-height: 15px;
+          cursor: pointer;
+      }
+
+      .titlePopUp {
+          font-size: 15px;
+      }
+
+      .idPopUp {
+          font-size: 12px;
+          line-height: 10px;
+          top: 10%;
+      }
+
+      .picturePopUp {
+          width: 50%;
+          height: 30vh;
+          top: 25%;
+      }
+
+      .brandPopUp {
+          top: 13%;
+          font-size: 17px;
+      }
+
+      .counter {
+          line-height: 15px;
+          font-size: 15px;
+      }
+
   }
