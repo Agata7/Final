@@ -18,7 +18,6 @@ header {
 main {
   padding: 15px 0;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -43,7 +42,7 @@ section {
   display: flex;
   justify-content: center;
   background-color: white;
-  flex-grow: 1;
+  min-width: 50%;
 }
 
 footer {
@@ -54,22 +53,24 @@ footer {
 }
 
 #pageNumbers {
-  display: inline-flex;
+  display: flex;
   color: black;
   font-size: 20px;
   padding-top: 2%;
   padding-bottom: 2%;
+  justify-content: center;
 }
 
 
 #pageNumbers>li {
-  margin: 5px;
+  margin: 2px;
   display: block;
   width: 30%;
   text-align: center;
-  padding: 5px;
+  padding: 2px;
   cursor: pointer;
   flex-basis: 5vh;
+  flex-shrink: 0;
 }
 
 
@@ -93,7 +94,7 @@ input {
   padding: 10px;
 }
 
-/* Ewentualna ikonka, jeśli sposób wyszukiwaania byłby na kilk */
+/* Ewentualna ikonka, jeśli sposób wyszukiwania byłby na klik */
 
 /* .fas {
   font-size: 150%;
