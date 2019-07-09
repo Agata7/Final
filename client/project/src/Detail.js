@@ -30,16 +30,16 @@ return (<div className="root">
         <img className="picturePopUp"src={this.props.picture} alt="products"/>
         <h4 className="brandPopUp">{this.props.brand}</h4>
         <p>{this.props.description}</p>
-        <div className="counterPopUp"><Counter/></div>
+        <div className="counterPopUp">
+        <Counter key={this.props.key} name={this.props.title}/></div>
         </div>
       </PopUp>
-{/* Można umieścić popUp jako komponent w kolejnym pliku */}
     </div>
      }
     <h2 className="title">{this.props.title}</h2>
     <h3 className="id">Product number: {this.props.presentable_id}</h3>
     <OpenImg/>
-    <Counter/>
+    <Counter key={this.props.presentable_id} name={this.props.title}/>
 </div>);
 }
 }

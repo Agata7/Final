@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Detail from "./Detail";
+import ShoppingCart from "./ShoppingCart";
 
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
     details: [],
     currentPage: 1,
     todosPerPage: 10,
-    searchProduct: ""
+    searchProduct: "",
   };
 
   handleChange = e => {
@@ -80,17 +81,19 @@ class App extends Component {
     return (
       <>
         <header>
-          <input
+        <input
             type="text"
             value={this.props.searchProduct}
             onChange={this.handleChange}
             placeholder="Search product..."
           />
-          {/* <i className="fas fa-search" /> */}
+          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+          <ShoppingCart name={this.props.name}/>
         </header>
         <div className="app">
           <main>
-            <article className="listProducts">{renderTodos}</article>
+            <article className="listProducts">{renderTodos}
+            </article>
             <section>
               <ul id="pageNumbers">{renderPageNumbers}</ul>
             </section>

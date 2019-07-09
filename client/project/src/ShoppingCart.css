@@ -1,0 +1,10 @@
+header .fa {
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    width: 5%;
+    height: 5vh;
+    right: 25px;
+    top: 7px;
+
+}
