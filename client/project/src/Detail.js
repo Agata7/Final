@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./popUp.css";
 import PopUp from "./PopUp";
 import "./Detail.css";
-import Counter from "./Counter"
+// import Counter from "./Counter"
 import "./Detail";
 
 
@@ -30,8 +30,10 @@ return (<div className="root">
         <img className="picturePopUp"src={this.props.picture} alt="products"/>
         <h4 className="brandPopUp">{this.props.brand}</h4>
         <p>{this.props.description}</p>
-        <div className="counterPopUp">
-        <Counter key={this.props.key} name={this.props.title}/></div>
+        <button
+            className="buyPopUp"
+            onClick={(e)=>this.props.handleAddToCart(e, this.props.title, this.props.presentable_id)}
+          >Add to cart</button>
         </div>
       </PopUp>
     </div>
@@ -39,7 +41,12 @@ return (<div className="root">
     <h2 className="title">{this.props.title}</h2>
     <h3 className="id">Product number: {this.props.presentable_id}</h3>
     <OpenImg/>
-    <Counter key={this.props.presentable_id} name={this.props.title}/>
+    {/* <Counter key={this.props.presentable_id} name={this.props.title}/> */}
+    <button
+            className="buy"
+            // disabled={this.state.shoppingCart <= 0 ? true : false}
+            onClick={(e)=>this.props.handleAddToCart(e, this.props.title, this.props.presentable_id)}
+          >Add to cart</button>
 </div>);
 }
 }

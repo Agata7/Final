@@ -10,6 +10,7 @@ class App extends Component {
     currentPage: 1,
     todosPerPage: 10,
     searchProduct: "",
+    cartItems:[]
   };
 
   handleChange = e => {
@@ -30,6 +31,38 @@ class App extends Component {
           details: date.products
         });
       });
+      // if(localStorage.getItem('cartItems')){
+      //   this.setState({cartItems:JSON.parse(localStorage.getItem('cartItems'))});
+      // }
+  }
+
+
+  handleAddToCart=(e, products, key)=>{
+    this.setState(state=>{
+      const cartItems = state.cartItems;
+      let productAlredyInCart = false;
+      cartItems.forEach(item=>{
+        if(item.key === key){
+          productAlredyInCart = true;
+          item.count++;
+        }
+      });
+      if(!productAlredyInCart){
+        cartItems.push({products, count:1, key,})
+      }
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      console.log(cartItems)
+      return cartItems;
+    })
+  }
+
+  handleRemoveCart=(e,item)=>{
+    this.setState(state=>{
+      const cartItems = state.cartItems.filter(elm=>elm.key !== item.key);
+      localStorage.setItem('cartItem', cartItems);
+      console.log(cartItems)
+      return {cartItems}
+    })
   }
 
   render() {
@@ -41,6 +74,7 @@ class App extends Component {
         title={detail.general.name}
         brand={detail.brand.name}
         description={detail.general.description}
+        handleAddToCart={this.handleAddToCart}
       />
     ));
     
@@ -87,13 +121,12 @@ class App extends Component {
             onChange={this.handleChange}
             placeholder="Search product..."
           />
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-          <ShoppingCart name={this.props.name}/>
         </header>
         <div className="app">
           <main>
             <article className="listProducts">{renderTodos}
             </article>
+           <aside> <ShoppingCart cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveCart}/></aside>
             <section>
               <ul id="pageNumbers">{renderPageNumbers}</ul>
             </section>

@@ -25,6 +25,7 @@
       color: white;
       font-weight: bold;
       background-color: blue;
+      cursor: pointer;
 
   }
 
@@ -95,13 +96,28 @@
       width: 50%;
   }
 
-  .counterPopUp {
+  /* .counterPopUp {
       position: absolute;
       display: block;
       width: 50%;
       bottom: 0;
       left: 0;
 
+  } */
+
+  .buyPopUp {
+      color: white;
+      font-size: 15px;
+      padding: 10px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      border: blue 2px solid;
+      background-color: blue;
+      cursor: pointer;
+      border-radius: 15%;
+      position: absolute;
+      bottom: 0px;
+      left: 17%;
   }
 
   @media screen and (max-width: 650px) {
@@ -123,7 +139,7 @@
       }
 
       .listProducts>div {
-          flex-basis: 70%;
+          flex-basis: 100%;
       }
 
       input {
@@ -162,9 +178,30 @@
           font-size: 17px;
       }
 
-      .counter {
+      /* .counter {
           line-height: 15px;
           font-size: 15px;
+      } */
+
+      .listProducts {
+
+          justify-content: flex-start;
+          align-content: flex-start;
+          max-width: 250px;
+          flex-basis: 60%;
       }
 
+      .basket {
+          max-width: 200px;
+          font-size: 10px;
+      }
+
+      .basket li {
+          margin: 5px;
+          padding: 5px 5px 22px 15px;
+      }
+
+      .basket li:first-child {
+          margin-top: 10px;
+      }
   }
