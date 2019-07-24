@@ -36,6 +36,14 @@ class App extends Component {
       // }
   }
 
+  // products from API
+
+  // componentWillMount(){
+  //   fetch("API").then(res => res.json())
+  //   .then(data => this.setState({
+  //     details:data
+  //   }))
+  // }
 
   handleAddToCart=(e, products, key)=>{
     this.setState(state=>{
@@ -48,7 +56,7 @@ class App extends Component {
         }
       });
       if(!productAlredyInCart){
-        cartItems.push({products, count:1, key,})
+        cartItems.push({products, count:1, key})
       }
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
       console.log(cartItems)
@@ -56,7 +64,7 @@ class App extends Component {
     })
   }
 
-  handleRemoveCart=(e,item)=>{
+  handleRemoveFromCart=(e, item)=>{
     this.setState(state=>{
       const cartItems = state.cartItems.filter(elm=>elm.key !== item.key);
       localStorage.setItem('cartItem', cartItems);
@@ -126,7 +134,7 @@ class App extends Component {
           <main>
             <article className="listProducts">{renderTodos}
             </article>
-           <aside> <ShoppingCart cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveCart}/></aside>
+           <ShoppingCart cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveFromCart}></ShoppingCart>
             <section>
               <ul id="pageNumbers">{renderPageNumbers}</ul>
             </section>

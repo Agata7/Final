@@ -8,6 +8,7 @@
       padding: 20px;
       background-color: #fff;
       overflow: scroll;
+      z-index: 4;
   }
 
   .closeBtn {
@@ -191,11 +192,6 @@
           flex-basis: 60%;
       }
 
-      .basket {
-          max-width: 200px;
-          font-size: 10px;
-      }
-
       .basket li {
           margin: 5px;
           padding: 5px 5px 22px 15px;
@@ -204,4 +200,10 @@
       .basket li:first-child {
           margin-top: 10px;
       }
+
+      .fullBasket {
+          width: 100%;
+          background-color: white;
+      }
+
   }
