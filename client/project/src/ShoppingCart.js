@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./ShoppingCart";
 import "./ShoppingCart.css";
+import Counter from "./Counter";
 
 class ShoppingCart extends Component {
   state = {
-    showing: true
+    showing: true,
   };
-  render() {
+
+    render() {
     const { cartItems } = this.props;
     const { showing } = this.state;
     return (
@@ -18,12 +20,14 @@ class ShoppingCart extends Component {
                   <ul>
                     {cartItems.map(item => (
                       <li>
+                        <img className="cartPicture"src={item.picture} alt='prducts'></img>
                         <b>{item.products}</b>
-                        <b className="buyProduct"> x {item.count} </b>
+                        <Counter numberProducts={item.count}/>
                         <button
                           className="removeProduct"
                           onClick = { (e) =>
                             this.props.handleRemoveFromCart(e, item)}>X</button>
+                          
                       </li>
                     ))}
                   </ul>

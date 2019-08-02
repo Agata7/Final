@@ -39,4 +39,9 @@
     background-color: blue;
     cursor: pointer;
     border-radius: 15%;
+    transition: color ease 0.7s;
+}
+
+.buy:hover {
+    color: gray;
 }

@@ -45,7 +45,7 @@ class App extends Component {
   //   }))
   // }
 
-  handleAddToCart=(e, products, key)=>{
+  handleAddToCart=(e, products, key, picture)=>{
     this.setState(state=>{
       const cartItems = state.cartItems;
       let productAlredyInCart = false;
@@ -56,7 +56,7 @@ class App extends Component {
         }
       });
       if(!productAlredyInCart){
-        cartItems.push({products, count:1, key})
+        cartItems.push({products, count:1, key, picture})
       }
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
       console.log(cartItems)

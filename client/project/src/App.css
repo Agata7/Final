@@ -40,6 +40,12 @@ main {
   padding: 5px;
   flex-basis: 35%;
   text-align: center;
+  transition: border ease 0.5s;
+}
+
+.listProducts>div:hover {
+  border: 2px solid gray;
+  border-radius: 5px;
 }
 
 section {

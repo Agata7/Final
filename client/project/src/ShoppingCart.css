@@ -1,113 +1,130 @@
 .basket .fa {
-    font-size: 40px;
-    display: block;
-    position: absolute;
-    width: 5%;
-    height: 5vh;
-    right: 50px;
-    top: 7px;
-    position: fixed;
-    z-index: 1;
-    color: white;
+  font-size: 40px;
+  display: block;
+  position: absolute;
+  width: 5%;
+  height: 5vh;
+  right: 50px;
+  top: 7px;
+  position: fixed;
+  z-index: 1;
+  color: white;
 }
 
 .basket .fa:hover {
-    color: darkblue;
-    cursor: pointer;
+  color: darkblue;
+  cursor: pointer;
 }
 
 .basket {
-    text-align: center;
+  text-align: center;
 }
 
 .fullBasket {
-    font-size: 20px;
-    width: 550px;
-    height: 5vh;
-    position: fixed;
-    right: 0px;
-    top: 60px;
-    background-color: white;
+  font-size: 15px;
+  width: 550px;
+  height: 5vh;
+  position: fixed;
+  right: 0px;
+  top: 60px;
+  background-color: white;
 }
 
-
 .basket .button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.basket b {
+  margin: 7%;
 }
 
 .basket .removeProduct {
-    background-color: blue;
-    position: absolute;
-    bottom: 2px;
-    right: 3px;
-    font-size: 15px;
-    color: white;
-    border: 2px solid blue;
-    border-radius: 50%;
-    cursor: pointer;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    line-height: 15px;
+  background-color: blue;
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  font-size: 15px;
+  color: white;
+  border: 2px solid blue;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  line-height: 15px;
 }
 
 .basket span {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    right: 45px;
-    top: 7px;
-    font-size: 20px;
-    line-height: 20px;
-    border-radius: 50%;
-    color: blue;
-    font-weight: bold;
-    position: fixed;
-    z-index: 1;
-    background-color: white;
-    border: 4px solid blue;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 45px;
+  top: 7px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  color: blue;
+  font-weight: bold;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  border: 4px solid blue;
 }
 
 .basket li {
-    margin: 10px;
-    border: 2px solid blue;
-    padding: 10px 10px 27px 20px;
-    position: relative;
-    background-color: white;
+  margin: 10px;
+  border: 2px solid gray;
+  padding: 10px 10px 27px 20px;
+  position: relative;
+  background-color: white;
 }
 
 .basket li:first-child {
-    margin-top: 23px;
+  margin-top: 23px;
 }
 
 .basket ul {
-    background-color: white;
-    border: 2px solid gray;
-    border-radius: 0px 0px 5% 5%;
-    z-index: 5;
+  background-color: white;
+  border: 2px solid blue;
+  margin-top: -3px;
+  border-radius: 0px 0px 10px 10px;
+  z-index: 5;
 }
 
-.buyProduct {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50% - 18px);
+.cartPicture {
+  width: 17%;
+  height: 10vh;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  z-index: 0;
 }
 
 @media screen and (max-width: 650px) {
-    .basket span {
-        width: 25px;
-        height: 25px;
-        right: 20px;
-        font-size: 15px;
-        line-height: 15px;
-        border-radius: 50%;
-    }
+  .basket span {
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 50%;
+  }
 
-    .basket ul {
-        background-color: rgba(255, 255, 255, 0.5);
-        filter: alpha(opacity=60);
-        width: 100%;
-        height: 100vh;
-    }
+  .basket ul {
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: alpha(opacity=60);
+    width: 100%;
+    height: 100vh;
+    border: 0px;
+  }
+
+  .basket li:first-child {
+    margin-top: 10px;
+  }
+
+  .fullBasket {
+    width: 100%;
+    background-color: white;
+  }
 }

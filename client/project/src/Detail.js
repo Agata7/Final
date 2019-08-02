@@ -32,7 +32,7 @@ return (<div className="root">
         <p>{this.props.description}</p>
         <button
             className="buyPopUp"
-            onClick={(e)=>this.props.handleAddToCart(e, this.props.title, this.props.presentable_id)}
+            onClick={(e)=>this.props.handleAddToCart(e, this.props.title, this.props.presentable_id, this.props.picture)}
           >Add to cart</button>
         </div>
       </PopUp>
@@ -45,7 +45,7 @@ return (<div className="root">
     <button
             className="buy"
             // disabled={this.state.shoppingCart <= 0 ? true : false}
-            onClick={(e)=>this.props.handleAddToCart(e, this.props.title, this.props.presentable_id)}
+            onClick={(e)=>this.props.handleAddToCart(e, this.props.title, this.props.presentable_id, this.props.picture)}
           >Add to cart</button>
 </div>);
 }
