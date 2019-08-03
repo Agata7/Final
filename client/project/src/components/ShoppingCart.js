@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ShoppingCart";
-import "./ShoppingCart.css";
+import "../styles/ShoppingCart.css";
 import Counter from "./Counter";
 
 class ShoppingCart extends Component {

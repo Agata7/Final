@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import "./popUp.css";
+import "../styles/popUp.css";
 import PopUp from "./PopUp";
-import "./Detail.css";
-// import Counter from "./Counter"
+import "../styles/Detail.css";
 import "./Detail";
 
 
